@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyRectangleTest {
     @Test
-    void area() {
+    void calculateAreaOfRectangleHavingHeightMoreThanWidth() {
         MyRectangle myRectangle = new MyRectangle(1, 2);
-        assertEquals(2, myRectangle.area(), "the area of a rec with w:1, h:2");
+        assertEquals(2, myRectangle.area());
     }
 
     @Test
-    void perimeter() {
+    void calculatePerimeterOfRectangleHavingHeightMoreThanWidth() {
         MyRectangle myRectangle = new MyRectangle(1, 2);
-        assertEquals(6, myRectangle.perimeter());
+        assertEquals(6, myRectangle.perimeter(), "the perimeter of rec with w:1, h:2");
     }
 }
