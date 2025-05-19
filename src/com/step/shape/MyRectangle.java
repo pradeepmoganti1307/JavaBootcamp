@@ -16,6 +16,6 @@ public class MyRectangle implements ClosedShape {
 
     @Override
     public int perimeter() {
-        return 2*(this.width + this.height);
+        return 2 * (this.width + this.height);
     }
 }

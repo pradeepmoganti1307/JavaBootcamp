@@ -16,4 +16,11 @@ class MyRectangleTest {
         MyRectangle myRectangle = new MyRectangle(1, 2);
         assertEquals(6, myRectangle.perimeter(), "the perimeter of rec with w:1, h:2");
     }
+
+    @Test
+    void calculatePerimeterOfRectangleHavingHeightLessThanWidth() {
+        MyRectangle myRectangle = new MyRectangle(1, 2);
+        assertEquals(6, myRectangle.perimeter(), "the perimeter of rec with w:1, h:2");
+
+    }
 }
