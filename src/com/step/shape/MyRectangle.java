@@ -1,6 +1,6 @@
 package com.step.shape;
 
-public class MyRectangle {
+public class MyRectangle implements ClosedShape {
     private final int width;
     private final int height;
 
@@ -9,10 +9,12 @@ public class MyRectangle {
         this.height = height;
     }
 
+    @Override
     public int area() {
         return this.width * this.height;
     }
 
+    @Override
     public int perimeter() {
         return 2*(this.width + this.height);
     }
