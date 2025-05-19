@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class DummyTest {
     @Test
     void firstTest() {
-        assertEquals(2, new Dummy().get2());
+        Dummy dummy = new Dummy();
+        assertEquals(2, dummy.get2());
     }
 }
