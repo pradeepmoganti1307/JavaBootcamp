@@ -3,6 +3,8 @@ package com.step.coin;
 import java.util.Objects;
 
 public class Probability {
+    private static final int IMPOSSIBILITY = 0;
+    private static final int CERTAINTY = 1;
     private final double probability;
 
     private Probability(double probability) {
@@ -10,13 +12,13 @@ public class Probability {
     }
 
     public static Probability of(double probability) throws Exception {
-        if (probability < 0 || probability > 1)
+        if (probability < IMPOSSIBILITY || probability > CERTAINTY)
             throw new IllegalArgumentException("Provability invalid");
         return new Probability(probability);
     }
 
     public Probability complement() {
-        double complementOfProbability = 1 - this.probability;
+        double complementOfProbability = CERTAINTY - this.probability;
         return new Probability(complementOfProbability);
     }
 
@@ -24,7 +26,7 @@ public class Probability {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Probability that = (Probability) o;
-        return Double.compare(probability, that.probability) == 0;
+        return Double.compare(probability, that.probability) == IMPOSSIBILITY;
     }
 
     @Override
