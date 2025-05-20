@@ -10,11 +10,11 @@ public class Length {
     }
 
     public static Length createFromInches(double inch) {
-        return new Length(inch);
+        return new Length(1 * inch / 1);
     }
 
     public static Length createFromFeet(double feet) {
-        return new Length(feet * 12);
+        return new Length(12 * feet / 1);
     }
 
     public static Length createFromCm(double cm) {
@@ -25,6 +25,7 @@ public class Length {
         return new Length(2 * mm / 50);
 
     }
+
 
     @Override
     public boolean equals(Object o) {
